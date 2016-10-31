@@ -1,9 +1,11 @@
 package dicegame;
 
 public class Die {
-	 int faceValue;
+	 int faceValue, sides = 6;
+	 
+	 	
 	    public void roll(){
-	        faceValue = (int)(Math.random() * 6 + 1);
+	        faceValue = (int)(Math.random() * sides + 1);
 	    }
 
 	    public int getValue(){
