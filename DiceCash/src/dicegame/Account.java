@@ -13,7 +13,7 @@ public class Account {
 	}
 
 	private void setBalance(int balance) {
-		this.balance = balance;
+		this.balance = 3000;
 	}
 	
 	

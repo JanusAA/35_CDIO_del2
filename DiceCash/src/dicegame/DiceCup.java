@@ -1,5 +1,5 @@
 package dicegame;
-
+import java.util.ArrayList;
 import dicegame.Die;
 public class DiceCup {
 
