@@ -37,7 +37,16 @@ public class UserLanguage {
 	String swin = (" vandt spillet!");
 	String sstale = ("Spillet endte uafgjort");
 	
+	//Strings til spillernavn
+	String newLine = ("\n ");
+	String Player1EnterName = ("Spiller 1 indtast dit navn: "); 
+	String Player2EnterName = ("Spiller 2 indtats dit navn: "); 
+	
+	//Strings til bekræftelse af navn
+	String Confirm1 = ("Du har indtastet >>"); 
+	String Confirm2 = ("<< indtast >>Y<< for at bekræfte, eller >>retur<< for at rette navnet");
 	
 	
+
 	
 }
