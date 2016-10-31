@@ -3,12 +3,11 @@ package dicegame;
 public class Player {
 
 	private String name;
-	private int balance;
+	
 	
 	//Constructor:
-	public Player(String name, int balance){
+	public Player(String name){
 		this.name = name;
-		this.balance = balance;
 		}
 
 	//getters and setters. 
@@ -19,30 +18,12 @@ public class Player {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public int getBalance() {
-		return balance;
-	}
-
-	private void setBalance(int balance) {
-		this.balance = balance;
-	}
 	
-	
-	/**
-	 * addToCurrentBalance adds amount to the total balance and returns the new balance. 
-	 * @param amount
-	 * @return
-	 */
-	public int addToCurrentBalance(int amount){
-		balance = balance + amount;
-		return balance;
-	}
-	
-
-public String toString (){
-	return ( "Spiller: " + name + " points: " + balance);
-}
+// Nedenstående kode refererer til "name" og "balance" fra UserLanguage klassen. 
+//	
+//public String toString (){
+//	return (" pengebalance: " + balance);
+//}
 	
 	
 }
