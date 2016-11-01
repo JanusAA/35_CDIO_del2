@@ -16,7 +16,7 @@ public class UserLanguage {
 //	
 **/	
 	
-	//Vi laver et arrey af string objekter: 
+	//Vi laver et arrey af string objekter22: 
 	static String[] felt = {
 			"Du er landet på Tower felet, +250",
 			"Du er landet på Crater feltet, -100",
