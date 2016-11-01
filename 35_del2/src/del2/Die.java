@@ -1,17 +1,20 @@
 package del2;
 
 public class Die {
+	 int faceValue, sides; 
+	 	 	
+	    public void roll(){
+	        faceValue = (int)(Math.random() * sides + 1);
+	        this.sides = 6;
+	   }
 
-	/**
-	 * Roll a 6 sided dice returning a value between 1 and 6.
-	 * @return
-	 */
-	public int roll() {
-		// vi caster Math.random double til int. Vi adderer 1 til at starte med så randomnumber ikke kan blive 0.
-		int randomnumber= (int)(Math.random()*6+1);
-		return randomnumber;
-	
+	    public int getValue(){
+	        return faceValue;   
+	    }
+
+	    public String toString(){
+	        return Integer.toString(faceValue);
+	    }
 	}
 
-}
 

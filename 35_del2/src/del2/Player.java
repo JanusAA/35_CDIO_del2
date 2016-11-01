@@ -1,4 +1,4 @@
-package dicegame;
+package del2;
 
 public class Player {
 
