@@ -46,7 +46,4 @@ public class UserLanguage {
 	String Confirm1 = ("Du har indtastet >>"); 
 	String Confirm2 = ("<< indtast >>Y<< for at bekræfte, eller >>retur<< for at rette navnet");
 	
-	
-
-	
 }
