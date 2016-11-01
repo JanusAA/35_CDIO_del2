@@ -16,8 +16,13 @@ public class UserLanguage {
 //	
 **/	 
 	
+<<<<<<< HEAD
 	//Vi laver et arrey af string objekter22: 
 	static String[] felt = {
+=======
+	//Vi laver et arrey af string objekter: 
+	public static String[] felt = {
+>>>>>>> branch 'yet-to-be-implemented' of https://github.com/JanusAA/35_CDIO_del2.git
 			"Du er landet på Tower felet, +250",
 			"Du er landet på Crater feltet, -100",
 			"Du er landet på Palace gates feltet, +100",
@@ -42,8 +47,15 @@ public class UserLanguage {
 	String Player1EnterName = ("Spiller 1 indtast dit navn: "); 
 	String Player2EnterName = ("Spiller 2 indtats dit navn: "); 
 	
+<<<<<<< HEAD
 	//Strings til bekræftelse af navn
 	String Confirm1 = ("Du har indtastet >>"); 
 	String Confirm2 = ("<< indtast >>Y<< for at bekræfte, eller >>retur<< for at rette navnet");
 	    
+=======
+	
+		
+	}
+	
+>>>>>>> branch 'yet-to-be-implemented' of https://github.com/JanusAA/35_CDIO_del2.git
 }
