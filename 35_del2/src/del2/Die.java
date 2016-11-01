@@ -4,7 +4,8 @@ public class Die {
 	 int faceValue, sides; 
 	 	 	
 	    public void roll(){
-	        faceValue = (int)(Math.random() * sides + 1);
+	        // Vi giver udvikler letter mulighed for at ændre antallet af sider på terningen
+	    	faceValue = (int)(Math.random() * sides + 1);
 	        this.sides = 6;
 	   }
 

@@ -1,5 +1,5 @@
 package del2;
-
+//Bør rettes!
 public class Player {
 
 	private String name;

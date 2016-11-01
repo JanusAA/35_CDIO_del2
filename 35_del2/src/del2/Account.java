@@ -26,7 +26,7 @@ public class Account {
 		balance = balance + amount;
 		return balance;
 	}
-	
+
 
 //Nedenstående kode skal referere til udskrift fra User language klassen
 	
