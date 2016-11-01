@@ -12,8 +12,8 @@ public class Account {
 		return balance;
 	}
 
-	private void setBalance(int balance) {
-		this.balance = 3000;
+	private void setBalance() {
+		this.balance = 1000;
 	}
 	
 	
@@ -24,7 +24,9 @@ public class Account {
 	 */
 	public int addToCurrentBalance(int amount){
 		balance = balance + amount;
-		return balance;
+			if(balance < 0){
+				balance = 0;
+			}return balance;
 	}
 
 
