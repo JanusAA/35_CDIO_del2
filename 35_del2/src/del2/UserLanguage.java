@@ -14,7 +14,7 @@ public class UserLanguage {
 //	String sf10 = ("Du er landet på The pit feltet, -50");
 //	String sf11 = ("du er landet på Goldmine feltet, +650");
 //	
-**/	
+**/	 
 	
 	//Vi laver et arrey af string objekter22: 
 	static String[] felt = {
