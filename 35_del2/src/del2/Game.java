@@ -1,12 +1,12 @@
 package del2;
 
 import del2.DiceCup;
-import del2.UserLanguage;
+import del2.ULang;
 import java.util.Scanner;
 import del2.Player;
 import del2.Account;
 import del2.Fields;
-import del2.Field;
+
 
 
 public class Game {
@@ -49,69 +49,73 @@ public class Game {
 
 
 		do {
-			System.out.println("\n " + "Spiller 1 indtats dit navn: ");
+			System.out.println("\n" + ULang.enterNameP1Text());
 			p1.setName(scan.nextLine()); 
 
-			System.out.println("Du har indtastet >>" + p1.getName() + "<< indtast >>Y<< for at bekræfte, eller >>retur<< for at rette navnet");
+			System.out.println(ULang.nameEnteredText() + p1.getName() + ULang.confirmText());
 			confirm = scan.nextLine();
 			confirm.toUpperCase();
 
 		}while(!(confirm.equalsIgnoreCase("Y")));
 
 		do {	
-			System.out.println("\n " + "Spiller 2 indtats dit navn: ");
+			System.out.println("\n" + ULang.enterNameP2Text());
 			p2.setName(scan.nextLine());
 
-			System.out.println("Du har indtastet >>" + p2.getName() + "<< indtast >>Y<< for at bekræfte, eller >>retur<< for at rette navnet");
+			System.out.println(ULang.nameEnteredText() + p2.getName() + ULang.confirmText());
 			confirm = scan.nextLine();
 			confirm.toUpperCase();
 
 		}while(!(confirm.equalsIgnoreCase("Y")));
 
+		
+		//Printer regler om 
+		System.out.println(ULang.gameRulesText());
+		
 		do {
 
 			do {
-				System.out.println("\n" + p1.getName() + " kast med terningerne");
+				System.out.println("\n" + p1.getName() + ULang.throwDiceText());
 
 				//bruger inp som en break for at kaste terningerne. 
 				inp = scan.nextLine();
 
 				r1 = d6.rollDiceCup();
-				a1.addToCurrentBalance(field[r1].getval());
+				a1.addToCurrentBalance(field[r1].getVal());
 
-				System.out.println("Du landede på " + field[r1].getfname() + " det har påvirket din balance med: " + field[r1].getval());
-				System.out.println("Din konto er på: " + a1.getBalance());
+				System.out.println(ULang.landOnText() + field[r1].getFName() + ULang.balanceAffectedText() + field[r1].getVal());
+				System.out.println(ULang.currentBalanceText() + a1.getBalance());
 
-			}while(field[r1].getekstra() == true);
+			}while(field[r1].getEkstra() == true);
 
 
 
 			do {
-				System.out.println("\n" + p2.getName() + " kast med terningerne");
+				System.out.println("\n" + p2.getName() + ULang.throwDiceText());
 
 				//bruger inp som en break for at kaste terningerne. 
 				inp = scan.nextLine();
 
 				r2 = d6.rollDiceCup();
-				a2.addToCurrentBalance(field[r2].getval());
+				a2.addToCurrentBalance(field[r2].getVal());
 
-				System.out.println("Du landede på " + field[r2].getfname() + " det har påvirket din balance med: " + field[r2].getval());
-				System.out.println("Din konto er på: " + a2.getBalance());
+				System.out.println(ULang.landOnText() + field[r2].getFName() + ULang.balanceAffectedText() + field[r2].getVal());
+				System.out.println(ULang.currentBalanceText() + a2.getBalance());
 
-			}while(field[r2].getekstra() == true);
+			}while(field[r2].getEkstra() == true);
 
 
 
 		}while(!(a1.getBalance() >= wincondition || a2.getBalance() >= wincondition));
 
 		if (a1.getBalance() > a2.getBalance())
-			System.out.println("Tillykke " + p1.getName() + " - Du har vundet");
-		else if (a2.getBalance() > a1.getBalance())
-			System.out.println("Tillykke " + p2.getName() + " - Du har vundet");
+			System.out.println(ULang.congratsText() + p1.getName() + ULang.winnerText());
+		else if (a2.getBalance() > a1.getBalance()) 
+			System.out.println(ULang.congratsText() + p2.getName() + ULang.winnerText());
 		else if (a1.getBalance() == a2.getBalance())
-			System.out.println("Spillet ender uafgjort - I har begge lige mange point");		
+			System.out.println(ULang.stalemateText());		
 
-		System.out.println(p1.getName() + " konto: " + a1.getBalance() + "\t"  + p2.getName() + " konto: " + a2.getBalance());
+		System.out.println(p1.getName() + ULang.accountText() + a1.getBalance() + "\t"  + p2.getName() + ULang.accountText() + a2.getBalance());
 		
 	}
 

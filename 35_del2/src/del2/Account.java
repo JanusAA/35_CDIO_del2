@@ -11,11 +11,6 @@ public class Account {
 	public int getBalance() {
 		return balance;
 	}
-
-	private void setBalance() {
-		this.balance = 1000;
-	}
-	
 	
 	/**
 	 * addToCurrentBalance adds amount to the total balance and returns the new balance. 
