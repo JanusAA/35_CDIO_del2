@@ -44,7 +44,7 @@ public class UserLanguage {
 
 			//Strings til spillernavn
 			String newLine = ("\n ");
-		public String Player1EnterName = "Spiller 1 indtast dit navn: "; 
+			String Player1EnterName = "Spiller 1 indtast dit navn: "; 
 			String Player2EnterName = ("Spiller 2 indtats dit navn: "); 
 
 
@@ -52,5 +52,8 @@ public class UserLanguage {
 			String Confirm1 = ("Du har indtastet >>"); 
 			String Confirm2 = ("<< indtast >>Y<< for at bekræfte, eller >>retur<< for at rette navnet");
 
+			public String getspp(){
+				return spp;
+			}
 
 }

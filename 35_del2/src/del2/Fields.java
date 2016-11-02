@@ -6,7 +6,7 @@ public class Fields {
 	private boolean ekstratur;
 	
 	public Fields(String fname, int val, boolean ekstratur){
-		this.name = name; 
+		this.name = fname; 
 		this.val = val;
 		this.ekstratur = ekstratur;
 	}

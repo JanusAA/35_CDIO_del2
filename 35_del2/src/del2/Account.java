@@ -28,14 +28,6 @@ public class Account {
 				balance = 0;
 			}return balance;
 	}
-
-
-//Nedenstående kode skal referere til udskrift fra User language klassen
-	
-//public String toString (){
-//	return ( "Spiller: " + name );
-//}
-	
 	
 }
 
