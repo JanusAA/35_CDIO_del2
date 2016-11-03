@@ -16,6 +16,10 @@ public class Game {
 
 	public static void main(String[] args) {
 
+		/**
+		 * Creating array containing Fields class information, name of the field, value of the field
+		 * and a boolean statement which determines if the field provides a extra roll.
+		 */
 		Fields[] field = new Fields[13];{
 
 			field[2] = new Fields("Tower", 250, false);
@@ -30,16 +34,18 @@ public class Game {
 			field[11] = new Fields("The pit", -50, false);
 			field[12] = new Fields("Goldmine", 650, false);
 		}
+		
+		// Adding new scanner to retrieve player input.
 		Scanner scan = new Scanner(System.in);
 
-
+		//Creating objects/instances of; player class, account class, and a dicecup.
 		Player p1 = new Player("Spiller 1");
 		Player p2 = new Player("spiller 2");
 		Account a1 = new Account(1000);
 		Account a2 = new Account(1000);
 		DiceCup d6 = new DiceCup();
 
-
+		
 		int r1, r2;
 		int wincondition = 3000; 
 		String confirm = "";
@@ -47,7 +53,8 @@ public class Game {
 
 
 
-
+		// The two first do/while loops are used to retrieve the players names.
+		// Before the code continues, and the game is started the players have to confirm their entered name by entering "Y" in the TUI.
 		do {
 			System.out.println("\n" + ULang.enterNameP1Text());
 			p1.setName(scan.nextLine()); 
@@ -69,15 +76,18 @@ public class Game {
 		}while(!(confirm.equalsIgnoreCase("Y")));
 
 		
-		//Printer regler om 
+		//The ULang class contains strings which are used in syso's in the main class. 
+		//Hence if the language needs to be changed, one can change the text in the ULang class.
+		//Printing the rules and the brief introduction to the game from the ULang class. 
 		System.out.println(ULang.gameRulesText());
 		
+		// The do-while loop continues until the win condition is true; either of the player balances is  > 3000.
 		do {
 
 			do {
 				System.out.println("\n" + p1.getName() + ULang.throwDiceText());
 
-				//bruger inp som en break for at kaste terningerne. 
+				//Using the scan and the String inp to enable the player to "roll" the diceCup by stopping the code while waiting for player input. 
 				inp = scan.nextLine();
 
 				r1 = d6.rollDiceCup();
@@ -108,6 +118,7 @@ public class Game {
 
 		}while(!(a1.getBalance() >= wincondition || a2.getBalance() >= wincondition));
 
+		// Determines the winner based on the account balances: 
 		if (a1.getBalance() > a2.getBalance())
 			System.out.println(ULang.congratsText() + p1.getName() + ULang.winnerText());
 		else if (a2.getBalance() > a1.getBalance()) 

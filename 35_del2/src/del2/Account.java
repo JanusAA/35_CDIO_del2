@@ -3,17 +3,20 @@ package del2;
 public class Account {
 	private int balance;
 	
-	//Constructor:
+	//Constructor: Created a new account instance.
 	public Account (int balance){
 		this.balance = balance;
 		}
-
+/**
+ * getBalance returns the balance of the account instance.
+ * @return
+ */
 	public int getBalance() {
 		return balance;
 	}
 	
 	/**
-	 * addToCurrentBalance adds amount to the total balance and returns the new balance. 
+	 * addToCurrentBalance adds amount to the total balance and returns the new balance, note that the balance cannot be negative. 
 	 * @param amount
 	 * @return
 	 */
@@ -22,6 +25,7 @@ public class Account {
 			if(balance < 0){
 				balance = 0;
 			}return balance;
+			
 	}
 	
 }

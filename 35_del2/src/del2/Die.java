@@ -12,10 +12,6 @@ public class Die {
 	    public int getValue(){
 	        return faceValue;   
 	    }
-
-	   // public String toString(){
-	   //     return Integer.toString(faceValue);
-	   // }
 	}
 
 
