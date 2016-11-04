@@ -31,7 +31,7 @@ public class ULang {
 	}
 	
 	public static String enterNameP1Text(){
-		String enterNameP1 = "Spiller 1 indtats dit navn: ";
+		String enterNameP1 = "Spiller 1 indtast dit navn: ";
 		return enterNameP1;
 	}
 	public static String enterNameP2Text(){
@@ -52,8 +52,14 @@ public class ULang {
 		String winner = " - Du har vundet!";
 		return winner;
 	}
+	
+	public static String DiceSumText(){
+		String DiceSum = "Du har slået: ";
+		return DiceSum;
+	}
+	
 	public static String balanceAffectedText(){
-		String balanceAffected = " det har påvirket din balance med: ";
+		String balanceAffected = ". Det har påvirket din balance med: ";
 		return balanceAffected;
 	}
 	public static String landOnText(){
@@ -61,7 +67,7 @@ public class ULang {
 		return landOn;
 	}
 	public static String currentBalanceText(){
-		String currentBalance = " Din balance er nu: ";
+		String currentBalance = "Din balance er nu: ";
 		return currentBalance;
 	}
 	public static String stalemateText(){
