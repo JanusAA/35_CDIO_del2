@@ -92,6 +92,8 @@ public class Game {
 
 				r1 = d6.rollDiceCup();
 				a1.addToCurrentBalance(field[r1].getVal());
+				
+				System.out.println(ULang.DiceSumText() + r1);
 
 				System.out.println(ULang.landOnText() + field[r1].getFName() + ULang.balanceAffectedText() + field[r1].getVal());
 				System.out.println(ULang.currentBalanceText() + a1.getBalance());
